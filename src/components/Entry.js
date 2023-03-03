@@ -3,11 +3,11 @@ import {useForm} from 'react-hook-form';
 function Entry(props){
     const {register,handleSubmit,formState : {errors}} = useForm();
     const onFormSubmit = (data)=>{
-        props.getDataFromChild(data);
+        props.dataFromChild(data);
     }
     return(
-        <div className="d-block mx-auto p-5 bg-white bg-opacity-25">
-            <h1 className="fst-italic fw-bolder text-center" style = {{color : "#F94892"}}>Enter Names ;)</h1>
+        <div className="d-block mx-auto p-4 bg-white bg-opacity-10">
+            <h1 className=" fw-bolder text-center p-2" style = {{color : "	#ff5588"}}>Enter Names ;)</h1>
         <form onSubmit = {handleSubmit(onFormSubmit)} className="entry">
             <input type="text" placeholder="Person1" id = "person1" className = "form-control mx-auto my-3"  {...register("person1" , {required : true})}/>
             {errors.person1?.type === 'required' &&

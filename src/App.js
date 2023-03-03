@@ -8,8 +8,8 @@ function App() {
     person1 : "",
     person2 : ""
   })
-  const getDataFromChild=(dataFromChild)=>{
-    setData(dataFromChild);
+  const getDataFromChild = (info)=>{
+    setData(info);
   }
   return (
     <div className="App">
@@ -22,8 +22,8 @@ function App() {
       </div>
       <div className="ui m-3 p-2">
         {data.person1.length === 0 && data.person2.length === 0 
-        ?<Entry getDataFromChild={getDataFromChild}/>
-        :<Result person1 = {data.person1} person2 = {data.person2} getDataFromChild={getDataFromChild}/>
+        ?<Entry dataFromChild={getDataFromChild}/>
+        :<Result person1 = {data.person1} person2 = {data.person2} dataFromChild={getDataFromChild}/>
         }
       </div>
     </div>

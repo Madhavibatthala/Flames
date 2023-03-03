@@ -11,7 +11,7 @@ function Result(props){
         person2 : ""
       }
     const handleEvent = () => {
-        props.getDataFromChild(data);
+    props.dataFromChild(data);
     }
     let t1 = props.person1.split("");
     let t2 = props.person2.split("");
@@ -42,41 +42,41 @@ function Result(props){
     }
     console.log(list);
     return(
-        <div className="d-block mx-auto p-4 bg-white bg-opacity-25">
+        <div className="d-block mx-auto p-4 bg-white bg-opacity-10">
             <div className="relation ">
                 {list[0] === 'F' &&
                     <div>
-                        <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up as </h2>
+                        <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up as </h2>
                         <img src = {friends} style={{width : '200px' , height : '150px'}} alt ="Friends"/>
                     </div>
                 }
                 {list[0] === 'L' &&
                     <div>
-                    <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up in </h2>
+                    <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up in </h2>
                     <img src = {love} style={{width : '200px' , height : '150px'}} alt ="Love"/>
                     </div>
                 }
                 {list[0] === 'A' &&
                     <div>
-                    <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up in</h2>
+                    <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up in</h2>
                     <img src = {affection} style={{width : '200px' , height : '150px'}} alt ="Affection"/>
                     </div>
                 }
                 {list[0] === 'M' &&
                     <div>
-                    <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up in </h2>
+                    <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up in </h2>
                     <img src = {marriage} style={{width : '200px' , height : '150px'}} alt ="Marriage"/>
                     </div>
                 }
                 {list[0] === 'E' &&
                     <div>
-                    <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up as  ENEMIES </h2>
+                    <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up as  ENEMIES </h2>
                     {/*<img src = {enemy} style={{width : '200px' , height : '150px'}} alt ="enemies"/>*/}
                     </div>
                 }
                 {list[0] === 'S' &&
                     <div>
-                    <h2 style={{color : "#F94892"}}>{props.person1} & {props.person2} will end up as </h2>
+                    <h2 style={{color : "#9edba2"}}>{props.person1} & {props.person2} will end up as </h2>
                     <img src = {siblings} style={{width : '200px' , height : '150px'}} alt ="Siblings"/>
                     </div>
                 }
